@@ -1,9 +1,9 @@
 INTRODUCTION
-Easy Clean is a perfect multi-regions base theme for who loves to build up a website from scratch.
+Easy Clean is a perfect multi-region base theme for who loves to build up a website from scratch.
 
 FEATURES
 - Multiple regions
-- Eric Meyer Reset CSS
+- Reset CSS
 - HTML5 support
 - Modernizr
 
