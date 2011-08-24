@@ -93,9 +93,12 @@
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted){ ?>
-    <div class="submitted">
+    <p class="submitted">
       <?php print $submitted; ?>
-    </div>
+      <time pubdate datetime="<?php print $submitted_pubdate; ?>">
+      <?php print $submitted_date; ?>
+      </time>
+    </p>
   <?php } ?>
 
   <div class="content"<?php print $content_attributes; ?>>
@@ -110,7 +113,5 @@
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
-	
-  <span class="clear"></span>
-  
+
 </article>

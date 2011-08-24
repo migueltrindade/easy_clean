@@ -57,7 +57,5 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>
-  
-  <span class="clear"></span>
 
 </div>

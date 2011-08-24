@@ -68,37 +68,37 @@
  */
  ?>
 <?php if($page['outside_top']) { ?>
-<div id="outside-top"><?php print render($page['outside_top']); ?></div><!-- #outside-top -->
+<div class="outside-top"><?php print render($page['outside_top']); ?></div><!-- #outside-top -->
 <?php } ?>
 
-<div id="wrapper-container">
+<div class="wrapper-container">
   
-  <div id="container">
+  <div class="container">
   
-    <header id="header-page" class="clearfix">
+    <header class="header-page" role="banner">
       
       <?php if($page['header_top']) { ?>
-      <div id="header-top" class="clearfix"><?php print render($page['header_top']); ?></div><!--#header-top-->
+      <div class="header-top"><?php print render($page['header_top']); ?></div><!--#header-top-->
       <?php } ?>
       
       <?php if($logo || $site_name || $site_slogan || $page['header']) { ?>
       
-      <div id="header-middle" class="clearfix">
+      <div class="header-middle">
         
         <?php if($logo || $site_name || $site_slogan) { ?>
         
-        <div id="logo">
+        <div class="logo">
         
 					<?php if($logo) { ?>
-          <a id="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>"> <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /> </a>
+          <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>"> <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /> </a>
           <?php } ?>
           
           <?php if($site_name) { ?>
-            <h1 title="<?php print $site_name; ?>" id="site-name"><a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>"><?php print $site_name; ?></a></h1>
+            <h1 title="<?php print $site_name; ?>" class="site-name"><a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>"><?php print $site_name; ?></a></h1>
           <?php } ?>
           
           <?php if($site_slogan) { ?>         
-          <h2 title="<?php print $site_slogan; ?>" id="site-slogan"><?php print $site_slogan; ?></h2>
+          <h2 title="<?php print $site_slogan; ?>" class="site-slogan"><?php print $site_slogan; ?></h2>
           <?php } ?>
         
         </div>
@@ -112,110 +112,104 @@
       <?php } ?>
      
       <?php if($page['header_bottom']) { ?>
-      <div id="header-bottom" class="clearfix"><?php print render($page['header_bottom']); ?></div><!--#header-bottom-->
+      <div class="header-bottom"><?php print render($page['header_bottom']); ?></div><!--#header-bottom-->
       <?php } ?>
       
     </header><!-- #header-page -->
     
-    <?php if($page['preface_top']) { ?>
-    <div id="preface-top" class="clearfix"><?php print render($page['preface_top']); ?></div><!-- #preface-top -->
+    <?php if ($primary_nav) { ?>
+    <nav class="primary-navigation" role="navigation">
+      <?php print $primary_nav; ?>
+    </nav>
     <?php } ?>
     
-    <div class="wrapper-columns-outside">
-      
-      <div id="main">
+    <?php if($secondary_nav) { ?>
+    <nav class="secondary-navigation" role="navigation">
+      <?php print $secondary_nav; ?>
+    </nav>
+    <?php } ?>
 
-        <?php if($page['preface_bottom']) { ?>
-        <div id="preface-bottom" class="clearfix"><?php print render($page['preface_bottom']); ?></div><!-- #preface-bottom -->
+    <?php if($page['preface']) { ?>
+    <div class="preface"><?php print render($page['preface']); ?></div><!-- #preface -->
+    <?php } ?>
+    
+    <div class="wrapper-columns clearfix">
+
+      <div class="main" role="main">
+
+        <?php if($page['content_top']) { ?>
+        <div class="content-top"> <?php print render($page['content_top']); ?> </div><!-- #content-top -->
         <?php } ?>
-        
-        <div class="wrapper-columns-inside">
-          
-          <div id="wrapper-content">
 
-            <?php if($page['content_top']) { ?>
-            <div id="content-top" class="clearfix"> <?php print render($page['content_top']); ?> </div><!-- #content-top -->
-            <?php } ?>
+        <div class="content">
 
-            <div id="content-middle" class="clearfix">
-
-              <?php if($breadcrumb) { ?>
-              <nav id="breadcrumb"><?php print $breadcrumb; ?> </nav><!-- #breadcrumb -->
-              <?php } ?>
-
-              <?php if($page['highlighted']){ ?>
-              <div id="highlighted"><?php print render($page['highlighted']); ?></div><!-- #highlighted -->        
-              <?php } ?>
-
-              <?php print render($title_prefix); ?>
-              <?php if($title) { print '<h2 class="page-title"><span>'. $title .'</span></h2>'; } ?>
-              <?php print render($title_suffix); ?>
-
-              <?php if($tabs) { ?>
-              <div id="tabs"><?php print render($tabs); ?></div>
-              <?php } ?>
-
-              <?php if($messages) { ?>
-              <div id="messages" class="clear"><?php print $messages; ?></div><!-- #messages -->
-              <?php } ?>
-
-              <?php if($page['help']) { ?>
-              <div id="help"><?php print render($page['help']); ?></div><!-- #help -->
-              <?php } ?>
-
-              <?php if($action_links){ ?>
-              <div id="action-links">
-                <ul><?php print render($action_links); ?></ul>
-              </div><!-- #action-links -->
-              <?php } ?>
-
-
-              <?php print render($page['content']); ?> 
-
-              <span class="clear"></span> 
-
-            </div><!-- #content-middle -->
-
-            <?php if($page['content_bottom']) { ?>
-            <div id="content-bottom" class="clearfix"><?php print render($page['content_bottom']); ?></div><!-- #content-bottom -->
-            <?php } ?>
-
-          </div><!-- #wrapper-content -->
-
-          <?php if($page['sidebar_second']){ ?>
-          <aside id="sidebar-second" class="sidebar"> <?php print render($page['sidebar_second']) ?> </aside><!-- #sidebar-second -->
+          <?php if($breadcrumb) { ?>
+          <div class="breadcrumb"><?php print $breadcrumb; ?> </div><!-- #breadcrumb -->
           <?php } ?>
-        
-        </div>
-        
-        <?php if($page['postscript_top']) { ?>
-        <div id="postscript-top" class="clearfix"><?php print render($page['postscript_top']); ?></div><!-- #postscript-top -->
+
+          <?php if($page['highlighted']){ ?>
+          <div class="highlighted"><?php print render($page['highlighted']); ?></div><!-- #highlighted -->        
+          <?php } ?>
+
+          <?php print render($title_prefix); ?>
+          <?php if($title) { print '<h2 class="page-title"><span>'. $title .'</span></h2>'; } ?>
+          <?php print render($title_suffix); ?>
+
+
+          <?php if($tabs) { ?>
+          <div class="tabs"><?php print render($tabs); ?></div>
+          <?php } ?>
+
+          <?php if($messages) { ?>
+          <div class="wrapper-messages"><?php print $messages; ?></div><!-- #messages -->
+          <?php } ?>
+
+          <?php if($page['help']) { ?>
+          <div class="help"><?php print render($page['help']); ?></div><!-- #help -->
+          <?php } ?>
+
+          <?php if($action_links){ ?>
+          <div class="action-links">
+            <ul><?php print render($action_links); ?></ul>
+          </div><!-- #action-links -->
+          <?php } ?>
+
+          <?php print render($page['content']); ?> 
+
+        </div><!-- #content -->
+
+        <?php if($page['content_bottom']) { ?>
+        <div class="content-bottom"><?php print render($page['content_bottom']); ?></div><!-- #content-bottom -->
         <?php } ?>
 
-      </div><!-- #main -->
-      
+      </div><!-- #wrapper-content -->
+
       <?php if($page['sidebar_first']) { ?>
-      <aside id="sidebar-first" class="sidebar"><?php print render($page['sidebar_first']); ?> </aside><!-- #sidebar-first -->
+      <aside class="sidebar-first sidebar" role="complementary"><?php print render($page['sidebar_first']); ?> </aside><!-- #sidebar-first -->
+      <?php } ?>
+        
+      <?php if($page['sidebar_second']){ ?>
+      <aside class="sidebar-second sidebar" role="complementary"> <?php print render($page['sidebar_second']) ?> </aside><!-- #sidebar-second -->
       <?php } ?>
       
     </div>
     
-    <?php if($page['postscript_bottom']) { ?>
-    <div id="postscript-bottom" class="clearfix"><?php print render($page['postscript_bottom']); ?></div><!-- #postscript-bottom -->
+    <?php if($page['postscript']) { ?>
+    <div class="postscript"><?php print render($page['postscript']); ?></div><!-- #postscript -->
     <?php } ?>
     
-    <footer id="footer-page" class="clearfix">
+    <footer class="footer-page" role="contentinfo">
       
       <?php if($page['footer_top']) { ?>
-      <div id="footer-top" class="clearfix"><?php print render($page['footer_top']); ?></div> <!-- #footer-top -->
+      <div class="footer-top"><?php print render($page['footer_top']); ?></div> <!-- #footer-top -->
       <?php } ?>
       
       <?php if($page['footer']) { ?>
-      <div id="footer-middle" class="clearfix"><?php print render($page['footer']); ?></div><!-- #footer-middle -->
+      <div class="footer-middle"><?php print render($page['footer']); ?></div><!-- #footer-middle -->
       <?php } ?>
       
       <?php if($feed_icons || $page['footer_bottom']) { ?>
-      <div id="footer-bottom" class="clear"> <?php print $feed_icons ?> <?php print render($page['footer_bottom']); ?> </div><!-- #footer-bottom -->
+      <div class="footer-bottom"> <?php print $feed_icons ?> <?php print render($page['footer_bottom']); ?> </div><!-- #footer-bottom -->
       <?php } ?>
        
     </footer><!-- #footer-page -->
@@ -225,6 +219,6 @@
 </div><!-- #wrapper-container -->
 
 <?php if($page['outside_bottom']) { ?>
-<div id="outside-bottom" class="clear"><?php print render($page['outside_bottom']); ?></div>
+<div class="outside-bottom"><?php print render($page['outside_bottom']); ?></div>
 <!-- #outside-bottom -->
 <?php } ?>

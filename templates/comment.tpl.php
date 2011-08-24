@@ -90,5 +90,4 @@
 
   <?php print render($content['links']) ?>
   
-  <span class="clear"></span>
 </div>
