@@ -185,11 +185,11 @@
       </div><!-- #wrapper-content -->
 
       <?php if($page['sidebar_first']) { ?>
-      <aside class="sidebar-first sidebar" role="complementary"><?php print render($page['sidebar_first']); ?> </aside><!-- #sidebar-first -->
+      <aside class="first_sidebar sidebar" role="complementary"><?php print render($page['sidebar_first']); ?> </aside><!-- #sidebar-first -->
       <?php } ?>
         
       <?php if($page['sidebar_second']){ ?>
-      <aside class="sidebar-second sidebar" role="complementary"> <?php print render($page['sidebar_second']) ?> </aside><!-- #sidebar-second -->
+      <aside class="second_sidebar sidebar" role="complementary"> <?php print render($page['sidebar_second']) ?> </aside><!-- #sidebar-second -->
       <?php } ?>
       
     </div>
