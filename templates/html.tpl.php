@@ -33,17 +33,28 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
+$html_attributes = ' lang="' . $language->language . '" dir="' . $language->dir . '"';
 ?>
-<!doctype html>
-<!--[if IE 7 ]><html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]><html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>" class="no-js ie9"> <![endif]-->
+<!DOCTYPE html>
+<!--[if IE 7 ]><html<?php print $html_attributes; ?> class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html<?php print $html_attributes; ?> class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html<?php print $html_attributes; ?> class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>" class="no-js">
+<html<?php print $html_attributes; ?> class="no-js">
  <!--<![endif]-->
 <head>
-<title><?php print $head_title; ?></title>
 <?php print $head; ?>
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Prevent blocking -->
+<!--[if IE 6]><![endif]-->
+
+<title><?php print $head_title; ?></title>
 <?php print $styles; ?>
 <?php print $scripts; ?>
 <!--[if lt IE 9]>
