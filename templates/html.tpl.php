@@ -39,12 +39,10 @@ $html_attributes = ' lang="' . $language->language . '" dir="' . $language->dir 
 <!--[if IE 7 ]><html<?php print $html_attributes; ?> class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html<?php print $html_attributes; ?> class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html<?php print $html_attributes; ?> class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html<?php print $html_attributes; ?> class="no-js">
- <!--<![endif]-->
+<!--[if gt IE 9]><!--><html<?php print $html_attributes; ?> class="no-js"><!--<![endif]-->
 <head>
 <?php print $head; ?>
-
+  
 <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
