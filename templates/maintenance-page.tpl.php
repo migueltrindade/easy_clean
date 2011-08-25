@@ -10,6 +10,7 @@
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
  */
+
 $html_attributes = ' lang="' . $language->language . '" dir="' . $language->dir . '"';
 ?>
 <!DOCTYPE html>

@@ -136,10 +136,6 @@ table td { padding:5px; background:#f6f6f6; -webkit-border-radius:5px; -moz-bord
 /**
  * Media queries for responsive design
  */
-/* 
-Hardboiled CSS3 Media Queries by Andy Clarke:
-http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
-*/
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width :320px) and (max-device-width :480px) {
@@ -186,35 +182,4 @@ http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
 only screen and (-webkit-min-device-pixel-ratio :1.5),
 only screen and (min-device-pixel-ratio :1.5) {
 /* Styles */
-}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-@media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
-}
-
-@media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
-   Consider this:www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width:480px) {
-  /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
 }
