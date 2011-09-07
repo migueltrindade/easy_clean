@@ -52,11 +52,11 @@ body {
  */
 .wrapper-messages ul, .wrapper-messages ul li { list-style:none; background:none; }
 .wrapper-messages ul li { margin:0 0 5px 0; }
-.wrapper-messages .wrapper-messages { border:1px solid; padding:15px 20px 15px 50px; margin:0 0 10px 0; background-repeat:no-repeat; background-position:15px center; }
+.wrapper-messages .messages { border:1px solid; padding:15px 20px 15px 50px; margin:0 0 10px 0; background-repeat:no-repeat; background-position:15px center; }
 .wrapper-messages .status { color:#4F8A10; background-color:#E7F4E8; background-image:url('../images/icons/success.png'); }
 .wrapper-messages .error { color:#D8000C; background-color:#FBDDDD; background-image:url('../images/icons/error.png'); }
 .wrapper-messages .warning { color:#9F6000; background-color:#FEF5D5; background-image:url('../images/icons/warning.png'); }
-.wrapper-messages .wrapper-messages a { font-weight:bold; }
+.wrapper-messages .messages a { font-weight:bold; }
 
 /**
  * Forms fields
@@ -85,8 +85,8 @@ table td { padding:5px; background:#f6f6f6; -webkit-border-radius:5px; -moz-bord
 
 
 
-
 /*========= Your css goes here! */
+
 
 /**
  * non-semantic helper classes

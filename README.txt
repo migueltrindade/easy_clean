@@ -4,6 +4,15 @@ Easy Clean is a perfect multi-region base theme for who loves to build up a webs
 It includes an HTML5-friendly CSS Reset, Normalize CSS & other best practices from Paul Irish's HTML5 Boilerplate.
 
 
-INSTALLATION
+INSTALATION
 ------------
- * Extract the theme in your sites/all/themes/ directory and enable it
+Extract the theme in your sites/all/themes/ directory and enable it.
+
+
+USEFUL INFORMATION
+------------------
+Easy Clean applies classes to the <html> tag to enable easier styling for Internet Exporer
+
+.ie7 .selector { ... }
+.ie7 #selector { ... }
+.ie7.ie8 #selector { ... }
