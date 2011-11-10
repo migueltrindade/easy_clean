@@ -29,6 +29,7 @@ function easy_clean_preprocess_html(&$variables) { }
  * Implements template_preprocess_page();
  */
 function easy_clean_preprocess_page(&$variables) {
+  
   if (isset($variables['main_menu'])) {
     $variables['primary_nav'] = theme('links__system_main_menu', array(
       'links' => $variables['main_menu'],

@@ -1,3 +1,3 @@
-jQuery(document).ready(function($) {
-	// Your code here 
-});
+(function ($) {
+  // All your code here
+}(jQuery));

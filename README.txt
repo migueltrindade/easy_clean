@@ -11,7 +11,7 @@ Extract the theme in your sites/all/themes/ directory and enable it.
 
 USEFUL INFORMATION
 ------------------
-Easy Clean applies classes to the <html> tag to enable easier styling for Internet Exporer
+Easy Clean applies classes to the <html> tag to enable easier styling for Internet Explorer
 
 .ie7 .selector { ... }
 .ie7 #selector { ... }
